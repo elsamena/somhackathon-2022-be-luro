@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="images/logo/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="./css/styleedit.css" />
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+    
+    <script src="./js/config.js"></script>
+
+    <title>Edició del perfil</title>
+</head>
+<body>
+    <div id="links">
+        <a href="menu.html" id="menu">Tornar</a>
+      </div>
+    <div id="useredit">
+            <img src="./images/icons/icon-balck.png" id="profile"/>
+
+        <form name="edit" action="#" method="php">
+            <label class="users">Nom d'Usuari</label><br />
+            <input
+              type="text"
+              name="usuari"
+              required="required"
+              id="user"
+            /><br /><br />
+            <label class="users">Email</label><br />
+            <input
+              type="email"
+              name="email"
+              required="required"
+              id="email"
+            /><br /><br />
+            <label class="users">Contrasenya</label><br />
+            <input
+              type="password"
+              name="password"
+              required="required"
+              id="password"
+            />
+            <br /><br />
+            
+          
+            <p class="users">Nova foto de perfil</p>
+            <input  class="users" type="file" name="archive" id="file" accept="image/png, image/jpeg" ><br><br>
+            <input
+          type="button"
+          value="Guardar"
+          name="actualitzacio_dades"
+          id="save"
+        />
+        </form>
+    </div>
+    <script src="./js/script_edit.js"></script>
+    <script src="./js/utils.js"></script>
+    <script src="./js/storage.js"></script>
+</body>
+</html>

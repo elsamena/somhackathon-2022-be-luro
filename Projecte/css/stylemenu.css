@@ -1,0 +1,121 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    }
+    body{
+    background-image: url(../images/backgrounds/background-white.jpg);
+    background-size:cover;
+    overflow-x: hidden;
+    }
+    nav {
+    background-color: rgb(124, 19, 71);
+    width: 90%;
+    z-index: 100;
+    top: 0px;
+    height: 80px;
+    line-height: 35px;
+    }
+    #logobegin{
+    position:relative;
+    bottom:3px;
+    left:20px;
+    height:85px;
+    width:195px;
+    }
+    
+    #navright {
+    float:right;
+    margin:auto;
+    width:500px;
+    font-family:'Open Sans';
+    }
+    .menu{
+    position:relative;
+    width:10%;
+    height:80px;
+    left:1360px;
+    top:-80px;
+    }
+    .menu ul{
+    display:flex;
+    list-style:none;
+    }
+    .menu a{
+    display:block;
+    padding:22px;
+    background-color:rgb(124, 19, 71);
+    text-decoration:none;
+    color:white;
+    }
+    .menu a:hover{
+    background-color:rgb(238, 175, 238);
+    }
+    .menu ul li ul{
+    display:none;
+    }
+    .menu ul li a:hover + ul, .menu ul li ul:hover{
+    display:block;
+    }
+    .user{
+    font-family: 'Open Sans';
+    font-size:17px;
+    }
+    #newpost{
+    position:relative;
+    left:1100px;
+    top:-100px;
+    }
+    #newpost a{
+    font-family: 'Open Sans';
+    font-size: 20px;
+    color:white;
+    }
+    #newpost a:hover{
+    color:grey;
+    }
+
+    html {
+        box-sizing: border-box;
+        font-size: 62.5%;
+      }
+      .card{
+        display:inline-block;
+        position:relative;
+        left:0px;
+       }
+    
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 300px;
+        margin: auto;
+        text-align: center;
+        font-family: arial;
+      }
+
+      .price {
+        color: grey;
+        font-size: 22px;
+      }
+
+      .card button {
+        border: none;
+        outline: 0;
+        padding: 12px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+      }
+
+      .card button:hover {
+        opacity: 0.7;
+      }
+    .singin{
+        font-family: 'Open Sans';
+        font-size:17px; 
+        margin-right: -40px; 
+    }
+

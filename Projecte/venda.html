@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" cntent="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VENDA</title>
+    <link rel="stylesheet" type="text/css" href="css/venda.css"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+    <link rel="icon" type="image/x-icon" href="imagenes/oie_transparent.png">
+
+
+</head>
+<body>
+        <h2 class="product">Introdueix nom del producte:</h2>
+        <input class="product" id="namebox" type="text"><br><br>  
+        <div id="preu" class="col-4 p-3">
+            <form id="conversor" name="conversor">
+                <div class="form-group">
+                    <label class="text-primary" for="euros" id="label-euros"><h1 id="euro">€</h1></label>
+                    <input type="number" value="0" class="form-control" id="euros" name="euros"
+                        onfocus="asignaEliminaLg(this);" onblur="asignaEliminaLg(this);">
+                </div>
+            </div>
+            </form>
+        <div id="description0"style="height:60px;"><br>
+            <textarea id="description" name="description" placeholder="DESCRIPCIÓ"></textarea>
+          </div>
+        <button id="select">PUJAR</button>
+        <button id="upload">PUBLICAR</button>
+        <img id="myimg" src="images/bike1.jpg"><label id="UpProgress"></label><br><br>
+        <a id="back" href="menu.html">TORNAR</a>
+
+
+    <script language="javascript" src="js/config.js"></script>
+	<script language="javascript" src="js/firestore.js"></script>
+	<script language="javascript" src="js/storage.js"></script>
+	<script language="javascript" src="js/items.js"></script>
+    <script src="js/venda.js" id="MainScript"></script>
+
+
+</body>

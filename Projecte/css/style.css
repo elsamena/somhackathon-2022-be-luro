@@ -1,0 +1,273 @@
+* {
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+}
+html{
+scroll-behavior:smooth;
+overflow: hidden;
+}
+body{
+overflow-x: hidden;
+}
+nav{
+background-color:#103525;
+width:100%;
+position: fixed;
+z-index: 100;
+top:0px;
+height:80px;
+line-height: 35px;
+}
+#log{
+font-family: 'Racing Sans One', cursive;
+font-size: 60px;
+margin-top:20px;
+color:white;
+}
+#inici {
+background-image:url(../images/backgrounds/g.jpg);
+background-size:cover;
+height:100vh;
+width:100%;
+}
+#map{
+float: left;
+margin-left: 100px;
+margin-top:150px;
+}
+#navleft{
+float:left; 
+width: 50%;
+}
+#logobegin{
+width: 90px;
+height: 70px;
+}
+#navright{
+float:right;
+list-style:none;
+width: 50%;
+}
+#navright li{
+float:right;
+list-style:none;
+}
+#navright li a{
+padding: 7px 15px;
+text-decoration:none;
+font-size: 20px;
+display: block;
+color:rgb(227, 231, 229);
+font-family: "Open Sans";
+margin-top: 10px;
+margin-right: 30px;
+}
+
+#navright li a:hover{
+padding: 7px 15px;
+text-decoration:none;
+font-size: 20px;
+display: block;
+color:black;
+font-family: "Open Sans";
+margin-top: 10px;
+margin-right: 30px;
+}
+#logos{
+position:relative;
+top:170px;
+}
+#logobegin{
+width:200px;
+height:100px;
+float:left;
+margin-left:-10px;
+margin-top: -12px;
+}
+
+
+#logopng{ 
+height: 300px;
+width: 400px;
+display:block;
+margin:auto;
+}
+.title{
+color: #103525;
+font-size:50px;
+font-family:"Open Sans";
+position: relative;
+left:50px;
+top:100px;
+}
+#contact{
+background-image:url(../images/backgrounds/green.jpg);
+background-size:cover;
+background-repeat: no-repeat;
+height:100vh;
+width:100%; 
+}
+
+#telephone{
+background-image: url(../images/icons/icon-telephone.png);
+background-size: 50px;
+background-position: 530px;
+background-repeat: no-repeat;
+color:black;
+font-size:40px;
+font-family:"Open Sans";
+position:relative;
+left:170px;
+top:200px;
+}
+#location{
+background-image: url(../images/icons/icon-location.png);
+background-size: 50px;
+background-position: 530px;
+background-repeat: no-repeat;
+color:black;
+font-size:40px;
+font-family:"Open Sans";
+position:relative;
+left:170px;
+top:200px;
+}
+#mail{
+background-image: url(../images/icons/icon-mail.png);
+background-size: 50px;
+background-position: 530px;
+background-repeat: no-repeat;
+color:black;
+font-size:40px;
+font-family:"Open Sans";
+position:relative;
+left:170px;
+top:200px;
+}
+#company{
+background-image: url(../images/backgrounds/p.jpg);
+height:100vh;
+width:100%;
+}
+#logocode{
+size:20px;
+height: 400px;
+width: 800px;
+margin-left: 0px;
+margin-top:20px;
+}
+#deswhoarewe{
+font-family:"Open Sans";
+font-size: 30px;   
+color:black;
+position: relative;
+top:250px;
+left:600px;
+}
+#ajunta{
+float:left;
+position:relative;
+left:55px;
+top: 150px;
+}
+.login:hover{
+background-color: white;
+border-radius: 5px;
+height: 70px;
+}
+
+.singin:hover{
+background-color: white;
+border-radius: 5px;
+height: 70px;
+}
+
+.contact:hover{
+background-color: rgb(244, 239, 244);
+border-radius: 5px;
+height: 70px;
+}
+
+.company:hover{
+background-color:  rgb(231, 227, 231);
+border-radius: 5px;
+height: 70px;
+}
+
+#navi{
+    float: left;
+    margin-left: 80px;
+    margin-top: 200px;
+    font-size: 20px;
+    font-family: 'Racing Sans One', cursive;
+    font-size: 30px;
+    line-height: 80px;
+
+}
+#p1:hover{
+    -webkit-text-stroke: 1.3px white;
+    color:#103525;
+}
+#p2:hover{
+    -webkit-text-stroke: 1.3px white;
+    color:#0a9358;
+}
+#p3:hover{
+    -webkit-text-stroke: 1.3px white;
+    color:#103525;
+}
+#p4:hover{
+    -webkit-text-stroke: 1.3px white;
+    color:#103525;
+}
+#p5:hover{
+    -webkit-text-stroke: 1.3px white;
+    
+    color:#103525;
+}
+#p1{
+    text-decoration: none; 
+    color: white;
+}
+#p1:hover{
+    color: green;
+}
+
+#p2{
+    text-decoration: none; 
+    color: white;
+}
+#p2:hover{
+    color: green;
+}
+
+#p3{
+    text-decoration: none; 
+    color: white;
+}
+#p3:hover{
+    color: green;
+}
+
+#p4{
+    text-decoration: none; 
+    color: white;
+}
+#p4:hover{
+    color: green;
+}
+
+#p5{
+    text-decoration: none; 
+    color: white;
+}
+#p5:hover{
+    color: green;
+}
+#hackk{
+    float: right;
+    margin-top: 76px;
+    width: 300px;
+    height: 680px;
+}

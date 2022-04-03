@@ -1,0 +1,167 @@
+@charset "utf-8"; /* CSS Document */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+#fons {
+  background-image: url(../images/backgrounds/background-login.png);
+}
+#general {
+  background-image: url("../images/backgrounds/background-signin.jpg");
+  background-size: cover;
+}
+
+#logo {
+  float: left;
+  width: 75%;
+  height: 70px;
+  font-size: 36px;
+  background-color: rgb(175, 86, 184);
+  padding: 10px;
+  color: #416f9c;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+#menu {
+  height: 70px;
+  font-size: 16px;
+  background-color: rgb(175, 86, 184);
+  padding: 10px;
+  line-height: 50px;
+}
+
+#menu a {
+  text-decoration: none;
+  color: #59135c;
+  margin: 0px 20px;
+}
+#menu a:hover {
+  font-weight: bold;
+}
+.enfasi_negrtita {
+  font-weight: bold;
+}
+
+.derecha {
+  max-width: 100%;
+  text-align: right;
+  padding: 10px;
+}
+
+.derecha a:hover {
+  font-weight: bold;
+}
+.enfasi_color {
+  color: #59135c;
+}
+
+.img_xs {
+  width: 20px;
+}
+.img_s {
+  width: 30px;
+}
+.img_m {
+  width: 150px;
+  height: 150px;
+}
+
+#footer {
+  clear: both;
+  max-width: 100%;
+  font-size: 13px;
+  background-color: #565454;
+  color: #e6e6e6;
+  height: 180px;
+  padding: 10px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+#footer div {
+  float: left;
+  width: 33%;
+}
+
+#footer a:hover {
+  text-decoration: underline;
+}
+#footer ul {
+  list-style: none;
+}
+#footer ul li {
+  margin-left: 100px;
+}
+
+#text {
+  padding-top: 0px;
+  padding-left: 30%;
+  padding-top: 30vh;
+  width: 40%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+#quadrat {
+  width: 40%;
+  height: 650px;
+  background-color: white;
+  border: 3px solid #ba1ac0;
+  margin-top: 90px;
+  padding-right: 0%;
+  margin-left: 5%;
+  margin-right: 27%;
+  float: right;
+}
+.from-register {
+  width: 700px;
+  padding: 30px;
+  margin: auto;
+  margin-top: 100px;
+  color: #ba1ac0;
+  border-radius: 4px;
+  font-family: "calibri";
+}
+#adalt {
+  color: #565454;
+  font-size: 22px;
+  margin-bottom: 20px;
+  margin-top: -90px;
+  font-weight: bold;
+}
+.controls {
+  width: 80%;
+  background: #e6e6e6;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 2px solid #ba1ac0;
+  font-family: "calibri";
+  font-size: 18px;
+}
+#recuadre {
+  height: 30px;
+  font-size: 18px;
+}
+
+.from-register .botons {
+  background-color: #ba1ac0;
+  padding: 12px;
+  border-radius: 4px;
+  margin-left: 303px;
+  margin-top: 20px;
+  width: 220px;
+  color: rgba(255, 255, 255, 0.719);
+  font-size: 22px;
+}
+
+#check {
+  position: absolute;
+}
+
+input.controls {
+  display: block;
+}
+
+#num {
+  margin-right: 450px;
+  margin-bottom: 0px;
+}

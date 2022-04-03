@@ -1,0 +1,80 @@
+body{
+background-image:url(../images/backgrounds/zyro-image.png);
+background-size: cover;
+overflow-x:hidden;
+}
+#profile{
+position:relative;
+left:670px;
+top:30px;
+height:130px;
+width:130px;
+border-radius: 100%;
+border: 7px solid white;
+}
+#profile:hover{
+background-color:rgb(230, 144, 144);
+}
+.users{
+font-family:'Open Sans';
+font-weight: bold;
+font-size:25px;
+color:white;
+position:relative;
+left:600px;
+top:80px;
+}
+input[type="text"]{
+font-size:25px;
+border-radius: 10px;
+left:600px;
+top:80px;
+position:relative;
+}
+input[type="password"]{
+font-size:25px;
+border-radius: 10px;
+left:600px;
+top:80px;
+position:relative;
+margin-bottom:10px;
+}
+input[type="email"]{
+font-size:25px;
+border-radius: 10px;
+position:relative;
+left:600px;
+top:80px;
+}
+#save{
+border-radius: 10px;
+background-color:rgb(124, 19, 71);
+font-family:'Open Sans';
+color:white;
+font-size:30px;
+position:relative;
+left:380px;
+top:170px;
+}
+#save:hover{
+background-color: rgb(238, 175, 238);
+color:black;
+}
+#links{
+position:relative;
+left:1260px;
+top:10px;
+}
+#menu{
+font-family: "Open Sans";
+color: white;
+font-size:21px;
+nav-left:120px;
+position: relative;
+top:10px;
+}
+#menu:hover{
+font-family: "Open Sans";
+color: rgb(238, 175, 238);
+font-size:21px;
+}

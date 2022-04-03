@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@200&display=swap');
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  
+  body {
+    font-family: 'Exo', sans-serif;    
+    background: linear-gradient(to right,#103525, #448f66);
+    overflow-y:hidden;
+    overflow-x:hidden;
+
+  }
+
+  .product{
+    position:relative;
+    left:50px;
+    top:70px;
+  }
+  
+  #euros{
+    height:40px;
+    width:100px;
+    border-radius:10px;
+  }
+  #euro{
+    position:relative;
+    left:120px;
+    top:7px;
+    color:white;
+  }
+  #preu{
+    position:relative;
+    left:500px;
+  }
+  #namebox{
+    height:40px;
+    width:400px;
+    border-radius:10px;
+  }
+  h2{
+    color:white;
+  }
+  .form-control{
+    position:relative;
+    top:-43px;
+  }
+  
+  #myimg{
+    margin-top:10px;
+    position:relative;
+    height:400px;
+    width:600px;
+    border-radius:10px;
+    left:50px;
+  }
+
+  #description{
+    background-color: #b9ecbe;
+    position:absolute;
+    height:230px;
+    width:550px;
+    border-radius:10px;
+    color:black;
+    text-align:justify;
+    padding:10px;
+    font-size: 1.5em;
+    left:800px;
+    top:280px;
+  }
+ 
+  #select{
+    background-color: #b9ecbe;
+    position:absolute;
+    width:120px;
+    height:40px;
+    top:600px;
+    border-radius:2px;
+    right:300px;
+    color:black;
+    border-radius:5px;
+    font-weight:bolder;
+
+  }
+  #upload{
+    background-color: #b9ecbe;
+    position:absolute;
+    width:120px;
+    height:40px;
+    top:600px;
+    border-radius:2px;
+    right:170px;
+    color:black;
+    border-radius:5px;
+    font-weight:bolder;
+
+
+  }
+  #select:hover{
+    background-color: #7ba37f;
+  }
+  #upload:hover{
+    background-color: #7ba37f;
+  }
+  input{
+    color:black;
+    font-family: 'Exo', sans-serif;    
+    font-weight:bolder;
+  }
+
+  #UpProgress{
+    color:white;
+    display:block;
+    font-size:200%;
+    margin-top:10px;
+    margin-left:300px;
+    }
+
+    ::placeholder {
+      font-family: 'Exo', sans-serif;    
+      color: black;
+      font-weight: bolder;
+    }
+
+    #back{
+      text-decoration: none;
+      color: white;
+      margin-left: 30px;
+      font-size: 20px;
+    }
+    #back:hover{
+      color: lightgreen;
+    }

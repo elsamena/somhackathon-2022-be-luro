@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulari</title>
+    <link rel="stylesheet" media="all" href="css/estiloForm.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+</head>
+<body>
+    
+    <h1 class="hype">Benvolgut a Be-Luro</h1>
+    <div id="general">
+        <form id="form" name="create" method="post" action="menu.html" >
+            <h3>Per crear una nova compte Introdueix les següents dades:</h3>
+            <label for="nusuari" class="checn">nom</label>
+            <input type="text" id="nusuari" name="nusuari" required="required" maxlength="20" pattern="[a-zA-Z0-9_]{3,20}">
+               
+            <label for="cusuari" class="checn">cognoms</label>
+            <input type="text" id="cusuari" name="cusuari" required="required" maxlength="20" pattern="[a-zA-Z0-9_]+([ ]{1})+[a-zA-Z0-9_]{4,20}"><br>
+
+            <label for="username" class="checn">alias</label>
+            <input type="text" id="username" name="username" required="required" maxlength="20" pattern="[a-zA-Z0-9_]{3,20}">
+              
+            <label for="edat" class="checn">edat</label>
+            <input type="text" id="edat" name="edat" required="required" maxlength="20" pattern="[0-9]{2,4}"><br>
+
+            <label for="fusuari" id="edatl" class="checn">data de naixement</label>
+            <input type="date" id="fusuari" required="required" name="fusuari" min="1940-01-01" step="1"><br>
+
+            <label for="email" class="checn">email</label>
+            <input type="email" id="email" name="email" required="required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><br>
+            
+            <label for="contraseña" class="checn">contrasenya</label>
+            <input type="password" id="contraseña" class="passwd" name="contraseña" required="required" pattern="[a-zA-Z0-9_.%+-]{6,}$"><br>
+            
+            <label for="rcontraseña" class="checn">repeteix la contrasenya</label>
+            <input type="password" id="rcontraseña" class="rpasswd" name="rcontraseña" required="required" pattern="[a-zA-Z0-9_.%+-]{6,}$"><br>
+
+            <a class="here" href="privacidad.html">Aquí</a>
+            <input type="checkbox" id="cbox" name="cbox" value="checkbox" required="required"> <label for="cbox" class="checv">Sí, estic d'acord amb les condicions d'ús del lloc</label><br>
+            <input type="submit" id="subm" name="subimit" value="enviar dades">
+
+        </form>
+
+    </div>
+      
+</body>
+    <script language="javascript" src="js/config.js"></script>
+	<script language="javascript" src="js/firestore.js"></script>
+	<script language="javascript" src="js/storage.js"></script>
+	<script language="javascript" src="js/items.js"></script>
+	<script language="javascript">
+          
+          const formulari = document.getElementById('form');
+
+          formulari.addEventListener('submit', async (e) => {
+              e.preventDefault();
+
+              var nom = formulari['nusuari'].value;
+              var cognoms = formulari['cusuari'].value;
+              var alias = formulari['username'].value;
+              var data = formulari['fusuari'].value;
+              var edat = formulari['edat'].value;
+              var email = formulari['email'].value;
+              var contrasenya = formulari['contraseña'].value;
+              var rcontrasenya = formulari['rcontraseña'].value;
+              
+              if (contrasenya == rcontrasenya){
+            
+              await auth.createUserWithEmailAndPassword(email, contrasenya)
+						.then(async (p) => {			
+							alert("Usuari creat correctament");
+
+							    await db.collection('usuaris').doc(auth.currentUser.uid).set({
+                                
+                                cognoms: cognoms,
+                                data: data,
+                                edat: parseInt(edat),
+                                email: email,
+                                contrasenya: contrasenya,
+                                nom: nom  
+                            })
+
+                           window.location.href = "menu.html"; 
+
+						})
+						.catch(function(error) {
+							alert("Error al intentar crear l'usuari", "alert-danger");
+						});
+             }
+
+            else{
+                alert('Les contrasenyes no són iguals!')
+            }
+
+          })
+      </script>
+</html>
+
+
+

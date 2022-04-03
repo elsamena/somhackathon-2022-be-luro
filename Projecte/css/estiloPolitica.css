@@ -1,0 +1,84 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+@font-face {
+	font-family:OdinRounded;
+	src:url(../fonts/OdinRounded.otf);
+}
+
+body {
+	background-image: url(../images/background.png);
+	background-position: center;
+}
+
+header {
+	background-color: #34495e;
+	overflow: hidden;
+	background-image: linear-gradient(90deg,#5CB4D6 0%, #34495e 60%, #34495E 100%);
+}
+
+main {
+	width: 80%;
+	margin: 4% auto;
+	background-color: rgb(167, 26, 167);
+	border-radius: 10px 60px 10px 10px;
+	box-shadow: 8px 8px 12px #34495E;
+}
+
+footer {
+	background-color: #565454;
+	color: #E6E6E6;
+	overflow: hidden;
+	opacity: 0.8;
+	background-image: linear-gradient(180deg,#E6E6E6 0%, #565454 60%, #565454 100%);
+}
+
+footer div {
+	float: left;
+	width: 33%;
+	height: 220px;
+	font-family: Lucida Sans Unicode;
+	font-size: 0.8em;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 220px;
+
+}
+
+div#by {
+	width: 100%;
+	height: 50px;
+	font-size: 0.6em;
+	text-align: right;
+	vertical-align: middle;
+	line-height: 50px;
+	padding-right: 20px;
+}
+
+main#privacidad div {
+	padding: 20px;
+	margin: auto;
+	color: #FFFFFF;
+	font-family: Lucida Sans Unicode;
+	font-size: 14px;
+	text-align: justify;
+}
+
+div.private{
+  column-count:3;
+  column-gap:60px;
+  column-rule:3px dashed #95ACE7;
+  color:#659984;
+  font-size:18px;
+  text-align:justify;
+}
+
+.chec{
+	color: orange;
+	font-weight: bold;
+}

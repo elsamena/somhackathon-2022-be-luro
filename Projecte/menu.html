@@ -1,0 +1,186 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo/oie_transparent.png"/>
+    <link rel="stylesheet" type="text/css" href="./css/stylemenu.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Be-Luro</title>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+    
+
+</head>
+<body>
+    <nav>
+        <div id="navleft">
+            <a href="#"><img id="logobegin" src="./images/logo/oie_transparent (1).png"></a>
+        </div>
+        <forms name="search" action="search.html" method="get">
+            <label class="searching"></label>
+            <input
+              type="text"
+              name="search"
+              id="search"
+              style="font-family: FontAwesome;" placeholder='&#xf002 Buscar...'
+            />
+        </form>
+        <p id="newpost" style="margin-top: 20px;"><a href="./venda.html" style="text-decoration: none;">Nova publicació</a></p>
+        </nav>
+            <nav class="menu">
+            <ul>
+                
+                <li class="user" style="margin-left: -20px;"><a href="#">Usuari</a>
+                    <ul>
+                        <li class="editprofile" id="editprofile"><a href="informacioPersonal.html">Editar perfil</a></li>
+                        <li class="logout" id="logout"><a href="principalpage.html" onclick="clic()">Tancar Sessió</a></li>
+                    </ul>
+                </li>
+                <p class="singin"><a href="principalpage.html" >Mapa</a></p>
+
+            </ul>
+        </nav>
+
+        <div  id="listItems">
+            <div class="table-responsive">
+				<table class="table table-hover" id="post"  >
+				</table>
+			</div>
+        </div>
+        
+        <div class="card">
+            <img src="images/shop1.png" alt="Denim Jeans" style="width:100%">
+            <h1> GT Agressor Sport 27.5 2021</h1>
+            <p class="price">499€</p>
+            <p>GT 6061 T6 Aluminum Frame, Triple Triangle w/ Floating Seat Stays, Forged Drop-outs w/ Disc Brake Mounts, Zero Stack 1 1/8" Head Tube.</p>
+            <p><button onclick="alert('Has guanyat 100 Luros')">COMPRAR</button></p>
+        </div>
+    
+        <div class="card">
+            <img src="images/shop2.jpg" alt="Denim Jeans" style="width:100%">
+            <h1> Kross Hexagon 5.0 29</h1>
+            <p class="price">504€</p>
+            <p>Aluminium Performance,SR Suntour XCE 28 80 mm,Shimano HG200, 8 velocidades, 12-32,SR Suntour Raidon RLR Remote Lock 100mm</p>
+            <p><button>COMPRAR</button></p>
+          </div>
+    
+        <div class="card">
+            <img src="images/shop3.jpg" alt="Denim Jeans" style="width:100%">
+            <h1>BH Expert 4.0</h1>
+            <p class="price">839€</p>
+            <p>Els quadres BH Expert combinen un extra de rigidesa a la seva zona inferior amb alt nivell de confort i flexibilitat als tubs superiors.SR Suntour Raidon RLR Remote Lock 100mm</p>
+            <p><button>COMPRAR</button></p>
+        </div>
+        <div class="card">
+            <img src="images/shop4.jpg" alt="Denim Jeans" style="width:100%">
+            <h1> BH Expert 4.0 segunda mano</h1>
+            <p class="price">789€</p>
+            <p>Els quadres BH Expert combinen un extra de rigidesa a la seva zona inferior amb alt nivell de confort i flexibilitat als tubs superiors.SR Suntour Raidon RLR Remote Lock 100mm</p>
+            <p><button>COMPRAR</button></p>
+        </div>
+        <div class="card">
+            <img src="images/shop5.jpg" alt="Denim Jeans" style="width:100%">
+            <h1> Le Grand Madison 2 </h1>
+            <p class="price">260€</p>
+            <p>La bicicleta és un vehicle de propulsió humana que es mou gràcies a la força que es transmet a dues rodes alineades. El ciclista fa una força sobre els pedals.</p>
+            <p><button>COMPRAR</button></p>
+        </div>
+    
+        <div class="card">
+            <img src="images/shop1.png" alt="Denim Jeans" style="width:100%">
+            <h1> GT Agressor de segunda mano</h1>
+            <p class="price">300€</p>
+            <p>GT 6061 T6 Aluminum Frame, Triple Triangle w/ Floating Seat Stays, Forged Drop-outs w/ Disc Brake Mounts, Zero Stack 1 1/8" Head Tube.</p>
+            <p><button>COMPRAR</button></p>
+          </div>
+    
+        <div class="card">
+            <img src="images/shop3.jpg" alt="Denim Jeans" style="width:100%">
+            <h1>BH Expert 4.0 segunda mano</h1>
+            <p class="price">570€</p>
+            <p>Els quadres BH Expert combinen un extra de rigidesa a la seva zona inferior amb alt nivell de confort i flexibilitat als tubs superiors.SR Suntour Raidon RLR Remote Lock 100mm</p>
+            <p><button>COMPRAR</button></p>
+        </div>
+        <div class="card">
+            <img src="images/shop8.jpg" alt="Denim Jeans" style="width:100%">
+            <h1> Bicicleta elèctrica </h1>
+            <p class="price">2900€</p>
+            <p>GT 6061 T6 Aluminum Frame, Triple Triangle w/ Floating Seat Stays, Forged Drop-outs w/ Disc Brake Mounts, Zero Stack 1 1/8" Head Tube.</p>
+            <p><button>COMPRAR</button></p>
+        </div>
+        <div class="card">
+            <img src="images/shop2.jpg" alt="Denim Jeans" style="width:100%">
+            <h1> Kross Hexagon 5.0 29</h1>
+            <p class="price">504€</p>
+            <p>Aluminium Performance,SR Suntour XCE 28 80 mm,Shimano HG200, 8 velocidades, 12-32,SR Suntour Raidon RLR Remote Lock 100mm</p>
+            <p><button>COMPRAR</button></p>
+          </div>
+    
+          <div class="card">
+            <img src="images/shop4.jpg" alt="Denim Jeans" style="width:100%">
+            <h1> BH Expert 4.0 segunda mano</h1>
+            <p class="price">789€</p>
+            <p>Els quadres BH Expert combinen un extra de rigidesa a la seva zona inferior amb alt nivell de confort i flexibilitat als tubs superiors.SR Suntour Raidon RLR Remote Lock 100mm</p>
+            <p><button>COMPRAR</button></p>
+        </div>
+    
+        <div class="card">
+            <img src="images/shop1.png" alt="Denim Jeans" style="width:100%">
+            <h1> GT Agressor Sport 27.5 2021</h1>
+            <p class="price">499€</p>
+            <p>GT 6061 T6 Aluminum Frame, Triple Triangle w/ Floating Seat Stays, Forged Drop-outs w/ Disc Brake Mounts, Zero Stack 1 1/8" Head Tube.</p>
+            <p><button>COMPRAR</button></p>
+        </div>
+        <div class="card">
+            <img src="images/shop5.jpg" alt="Denim Jeans" style="width:100%">
+            <h1> Le Grand Madison 2 </h1>
+            <p class="price">260€</p>
+            <p>La bicicleta és un vehicle de propulsió humana que es mou gràcies a la força que es transmet a dues rodes alineades. El ciclista fa una força sobre els pedals.</p>
+            <p><button>COMPRAR</button></p>
+        </div>
+        <div class="card">
+            <img src="images/shop3.jpg" alt="Denim Jeans" style="width:100%">
+            <h1>BH Expert 4.0</h1>
+            <p class="price">839€</p>
+            <p>Els quadres BH Expert combinen un extra de rigidesa a la seva zona inferior amb alt nivell de confort i flexibilitat als tubs superiors.SR Suntour Raidon RLR Remote Lock 100mm</p>
+            <p><button>COMPRAR</button></p>
+        </div>
+        <div class="card">
+            <img src="images/shop4.jpg" alt="Denim Jeans" style="width:100%">
+            <h1> BH Expert 4.0 segunda mano</h1>
+            <p class="price">789€</p>
+            <p>Els quadres BH Expert combinen un extra de rigidesa a la seva zona inferior amb alt nivell de confort i flexibilitat als tubs superiors.SR Suntour Raidon RLR Remote Lock 100mm</p>
+            <p><button>COMPRAR</button></p>
+        </div>
+        <div class="card">
+            <img src="images/shop5.jpg" alt="Denim Jeans" style="width:100%">
+            <h1> Le Grand Madison 2 </h1>
+            <p class="price">260€</p>
+            <p>La bicicleta és un vehicle de propulsió humana que es mou gràcies a la força que es transmet a dues rodes alineades. El ciclista fa una força sobre els pedals.</p>
+            <p><button>COMPRAR</button></p>
+        </div>
+        
+        <script language="javascript" src="js/config.js"></script>
+        <script language="javascript" src="js/firestore.js"></script>
+        <script language="javascript" src="js/storage.js"></script>
+        <script language="javascript" src="js/items.js"></script>
+        <script language="javascript">
+
+            var myCookie = document.cookie;
+            var spito= myCookie.split('=');
+            var userid = spito[1];
+            console.log(userid)
+
+            function clic(){
+                confirm('Estas segur de tancar la sessió?')
+                firebase.auth().signOut();
+                document.cookie = myCookie + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;'
+                window.location.href= "principalpage.html"
+            }
+        </script>
+</body>
+</html>

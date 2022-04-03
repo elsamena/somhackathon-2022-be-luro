@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>sessió</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+		<link rel="stylesheet" media="all" href="css/estilo.css" />
+		<link rel="icon" type="image/x-icon" href="images/logo_definitiu.png">
+
+	</head>
+	
+	<body>
+		<div id="inici" class="context">
+			<h1>Inicia sessió</h1>
+	
+		</div>
+	<div class="area" >
+				<ul class="circles">
+					<div>
+						<form name="usuari1" method="post" action="">
+							
+							<label for="email" class="chec1">email</label>
+							<input type="email" id="email" name="email" placeholder="Introdueix el email" required="required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><br>
+							
+							<label for="contraseña" class="chec">contrasenya</label>
+							<input type="password" id="contraseña" name="contraseña" placeholder="Introdueix la contrasenya" required="required" pattern="[a-zA-Z0-9_.%+-]{6,}$"><br>
+							
+							<p class="forget" onclick="clip()">Has oblidat la contrasenya?</p><br>
+
+							<input type="button" id="login" name="subimit" value="enviar dades">
+
+							<input type="button" id="loging" name="goggle" value="Iniciar amb google">
+
+							<p class="caccount" onclick="javascript:location.href='index-form.html'">No tens compte de  Be-Luro? Creat una!</p>
+
+						</form>
+						</div>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>	
+						<li></li>
+				</ul>
+	</div >
+</body>
+
+	<script language="javascript" src="js/config.js"></script>
+	<script language="javascript" src="js/firestore.js"></script>
+	<script language="javascript" src="js/storage.js"></script>
+	<script language="javascript" src="js/items.js"></script>
+	<script language="javascript">
+		  
+		  var myCookie = document.cookie;
+              console.log (myCookie)
+		
+		document.getElementById("login").addEventListener("click", function() {
+			let email = document.getElementById("email").value;
+			var contraseña = document.getElementById("contraseña").value;
+
+			auth.signInWithEmailAndPassword(email, contraseña)
+			.then(async () => {			
+				 alert("Usuari autenticat");
+				 var userc = auth.currentUser.uid;
+				 var cook ="username="+userc;
+				 document.cookie = cook;
+				 
+				await db.collection("usuaris").doc(userc).update({
+					contrasenya: contraseña
+				});
+
+				
+				window.location.href = "menu.html";
+
+			
+			})
+			.catch(function(error) {
+				alert("Error d’autenticació");
+			});
+		});
+
+
+		//google login
+		const googleButton = document.getElementById('loging');
+		googleButton.addEventListener('click', e => {
+			const provider = new firebase.auth.GoogleAuthProvider();
+			auth.signInWithPopup(provider)
+				.then(result => {
+					var userc = auth.currentUser.uid;
+				 	var cook ="username="+userc;
+				 	document.cookie = cook;
+				 	alert(document.cookie);
+
+					console.log(userc)
+
+					const usersRef = db.collection('usuaris').doc(userc)
+
+					const doc = usersRef.get()
+					.then((docSnapshot) => {
+
+						if (!docSnapshot.data()) {
+
+							usersRef.set({
+                                
+                                cognoms: null,
+                                data: null,
+                                edat: null,
+                                email: null,
+                                contrasenya: 'contrasenya',
+                                nom: 'anònim'  
+                            })
+
+							db.collection('configUsuaris').doc(userc).set({
+                                foto: src="https://firebasestorage.googleapis.com/v0/b/projectefirebase-c5ba4.appspot.com/o/images%2Fitems%2Flogo.png?alt=media&token=f00384c5-7308-404f-85a2-336233d114e4",
+                                alias: 'anònim'
+                            })
+							console.log('no existeix')
+							alert("ja s'ha creat l'usuari, torna a iniciar sessió per accedir")
+						}
+						else {
+							console.log('ja existeix')
+							window.location.href = "inici.html";
+						}
+					})
+					.catch(err => {
+						alert("Error d’autenticació");
+						console.log(err)
+					})
+				})
+		})
+
+	function clip(){
+		let email = document.getElementById("email").value;
+
+		if(email != ""){
+			firebase.auth().sendPasswordResetEmail(email)
+			.then(function() {
+				alert("S'ha enviat un mail!")
+   		})
+    	.catch(function(error) {
+			alert("S'ha enviat un mail!")
+    	});
+		}
+		else{
+			alert('Introdueix un email vàlid!');
+		}
+	}
+
+	</script>
+</html>

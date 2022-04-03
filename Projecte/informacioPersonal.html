@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+  <link rel="icon" type="image/x-icon" href="images/logo_definitiu.png">
+  <title>Informació Personal</title>
+  <link rel="stylesheet" media="all" href="css\estiloPerfil.css" />
+</head>
+<body>        
+  </div>
+      
+  	<div>
+
+  		<h1 class="canviarnom"></h1>
+  		<form id="formulari">
+        <div class="peersonal">
+        <label for="nusuari" class="checn">nom</label>
+        <input type="text" id="nusuari" name="nusuari" required="required" maxlength="20" pattern="[a-zA-Z0-9_]{3,20}">
+           
+        <label for="cusuari" class="checn">cognoms</label>
+        <input type="text" id="cusuari" name="cusuari" required="required" maxlength="20" pattern="[a-zA-Z0-9_]+([ ]{1})+[a-zA-Z0-9_]{4,20}"><br>
+
+        <label for="edat" class="checn">edat</label>
+        <input type="text" id="edat" name="edat" required="required" maxlength="20" pattern="[0-9]{2,4}"><br>
+
+        <label for="fusuari" id="edatl" class="checn">data de naixement</label>
+        <input type="date" id="fusuari" required="required" name="fusuari" min="1940-01-01" step="1"><br>
+      
+        <input type="submit" class="buttonnomp" value="Guardar"></input><br>
+
+        
+        <input type="button" class="returnp" value="TORNAR" onclick="location.href='menu.html'"></input><br>
+
+      </div>
+  		</form>
+
+  	</div>
+
+  </body>
+  <script language="javascript" src="js/config.js"></script>
+  <script language="javascript" src="js/firestore.js"></script>
+  <script language="javascript" src="js/storage.js"></script>
+  <script language="javascript" src="js/items.js"></script>
+  <script language="javascript">
+
+  var myCookie = document.cookie;
+  var spito = myCookie.split('=');
+  var useruid = spito[1];
+  console.log (useruid)
+
+ 
+  db.collection("configUsuaris").doc(useruid).get()
+        .then(obtenerfoto);
+
+
+function obtenerfoto(querySnapshot){
+    let datosUsuario=querySnapshot.data();
+    console.log(datosUsuario);
+     var fperfil = document.getElementById("photo").src=datosUsuario["foto"];
+}
+
+ 
+/*                                                    Personal information                          */
+  db.collection("usuaris").doc(useruid).get()
+   .then(obtenerUsuario);
+
+
+  function obtenerUsuario(querySnapshot){
+  let datosUsuario=querySnapshot.data();
+  console.log(datosUsuario);
+  var cperfil = datosUsuario["cognoms"];
+  var dperfil = datosUsuario["data"];
+  var eperfil = datosUsuario["edat"];
+  var nperfil = datosUsuario["nom"];
+
+
+  var cognom = document.getElementById("cusuari").value = cperfil;
+  var nom = document.getElementById("nusuari").value = nperfil;
+  var edat = document.getElementById("edat").value = eperfil;
+  var data = document.getElementById("fusuari").value = dperfil;
+
+  }
+
+
+/*                                            Nova informació                       */
+  formulari.addEventListener('keyup', newinfo);
+
+  function newinfo() {
+    var cognom = document.getElementById("cusuari").value;
+    var nom = document.getElementById("nusuari").value;
+    var edat = document.getElementById("edat").value;
+    var data = document.getElementById("fusuari").value;
+
+
+    db.collection("usuaris").doc(useruid).update({
+      cognoms: cognom,
+      data: data,
+      edat: edat,
+      nom: nom
+    });
+  }
+
+  </script>
+</html>

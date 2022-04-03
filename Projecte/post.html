@@ -1,0 +1,51 @@
+<!doctype html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <title>Publicació</title>
+            <link rel="icon" href="images/logo/favicon.png" type="image/x-icon" />
+            <link rel="stylesheet" href="./css/stylepost.css" type="text/css" />
+
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+
+            <script src="./js/config.js"></script>
+
+        </head>
+
+        <body>
+            
+            <div id="general">
+                
+                        <div class="bg"></div>
+                        <div class="bg bg2"></div>
+                        <div class="bg bg3"></div>
+                        <div class="content"></div>
+                        <section class="from-register">
+                            <div>
+                            <p id="title">Publicació</p>
+                            </div>
+                            <form name="post" action="#" method="post">
+                            <label class="post">Títol</label>
+                            <input class="controls" type="text" name="titol" id="titol" placeholder="Introdueix un títol">
+                            <label class="post">Descripció</label>
+                            <input class="controls"  type="url" name="image" id="image" placeholder="Introdueix una descripció">
+                            <p class="post">Fitxer</p>
+                            <input type="file" name="archive" id="file" accept="image/png, image/jpeg" ><br><br>
+                            <label class="post">Hastags</label>               
+                            <input class="controls"  type="text" name="desc" id="desc" placeholder="Introdueix els hastags">
+                        
+                            <input class="botons"  type="button" value="Publicar" id="submit">
+                        </form>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <script src="./js/storage.js"></script>
+            <script src="./js/script_post.js"></script>
+            <script src="./js/utils.js"></script>
+        </body>
+    </html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Registre</title>
+    <link rel="icon" href="images/logo/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel='stylesheet' type='text/css'  href='./css/stylesignin.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <l ><a href="login.html" id="home">Iniciar Sessió</a></l>
+    <l ><a href="principalpage.html" id="home">Web principal</a></l>
+    <div id="table">
+        <div id="formulari">Registre</div><br>
+            <form name="registre" action="menu.html" method ="php">
+                <label class="users">Nom d'Usuari</label><br>
+                <input type="text" name="usuari" placeholder="Introdueix el nom d'usuari" required="required"/><br><br>
+                <label class="users">Email</label><br>
+                <input type="email" name="email" placeholder="Introdueix l'email" required="required"/><br><br>
+                <label class="users">Contrasenya</label><br>
+                <input type="password" name="password" placeholder="Introdueix la contrasenya" required="required"/> <br><br>
+                <label class="users">Data de naixement</label><br>
+                <input type="date" name="password" required="required" min='1920-01-01' max='2004-12-31'><br><br>
+                <input type="checkbox" required="required" name="condicions"/>
+                <label class="check">Si, estic d'acord amb les condicions d'ús</label><br><br><br><br>
+                <input type="submit" value="Registrar-se" name="enviament_dades"/>
+            </form>
+    </div>
+   
+</body>
+</html>

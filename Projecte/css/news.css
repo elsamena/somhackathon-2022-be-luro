@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@200&display=swap');
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  
+  body {
+    font-family: 'Exo', sans-serif;    
+    background: linear-gradient(to right,#103525, #103525);
+    overflow-y:hidden;
+    overflow-x:hidden;
+
+  }
+
+  #myCarousel{
+    background-color:#103525;
+    position:relative;
+    top:6px;
+    margin: auto;
+  }
+  #noticies{
+    color:rgb(255, 255, 255);
+    margin-left:670px;
+    font-size:500%;
+  }
+
+  #lateral{
+      background:none;
+  }
+  #lateral2{
+    background:none;
+}
+
+.jittery{  
+    margin-left:560px;
+    font-family: 'Racing Sans One', cursive !important;
+    color: white;
+    font:400 140px/1em Amatic SC;text-align:center;padding-top:140px}
+    .jittery span{animation:jitter 200ms linear infinite;color:#f06d06;display:inline-block}
+    @keyframes jitter{ 50%{transform:skewY(0.7deg) skewX(-0.7deg) scale(1.006);
+    }
+}
+
+#back{
+  text-decoration: none;
+  color: white;
+  margin-left: 30px;
+  font-size: 20px;
+}
+#back:hover{
+  color: lightgreen;
+}
+
